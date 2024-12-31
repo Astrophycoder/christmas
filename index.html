@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Treasure Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="startBackground"></div>
+        <h1>Christmas Treasure Hunt</h1>
+        <p id="instructions">Welcome to the Christmas Treasure Hunt!</p>
+        <button id="startButton">Start</button>
+        <div id="gameArea" style="display: none;">
+            <div id="timer">Time: 00:00</div>
+            <div id="instructionArea"></div>
+        </div>
+    </div>
+    <a-scene id="vrScene" style="display: none;">
+        <a-sky color="#000"></a-sky>
+        <a-entity id="camera" camera look-controls position="0 1.6 0"></a-entity>
+        <a-entity id="snowflakes"></a-entity>
+        <a-box id="vrStartButton" position="0 1.6 -3" depth="0.5" height="0.5" width="2" color="#4CAF50">
+            <a-text value="Start" align="center" color="#FFF" position="0 0 0.3"></a-text>
+        </a-box>
+    </a-scene>
+</body>
+</html>
